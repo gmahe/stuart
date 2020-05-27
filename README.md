@@ -2,7 +2,7 @@
 
 Node.js or Docker-compose are necessary.
 
-You need to add the MONGO_URI_STUART to connect to the remote mongo database.
+You need to add MONGO_URI_STUART environment variable to connect to the remote mongo database.
 
 ```bash
 > export MONGO_URI_STUART=my_mongo_url
@@ -72,17 +72,19 @@ Run it once
 > npm run test
 ```
 
-```bash
 Run it each time there is a change
+
+```bash
 > npm run test:watch
 ```
 
 ## TODO
 
-Add a local mongo service instead of remote one.
+- Add a local mongo service instead of remote one.
 
-In this case I used schemaLess mongoDB, if we need a proper schema we could go for an ORM like mongoose or RDBMS like mySql.
-Add Winston to save the logs.
+- In this case I used schemaLess mongoDB, if we need a proper schema we could go for an ORM like mongoose or RDBMS like mySql.
+
+- Add Winston to save the logs.
 
 - How about race conditions? How would you avoid race conditions if a lookup is being executed and a capacity update comes?
   I could use PubSub.
